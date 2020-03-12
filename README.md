@@ -73,7 +73,7 @@ game using html, css and javascript
 
 ### References/Resource links 
 
-For kingdom name 
+For kingdom name (Tavalon Empire) )
 https://www.fantasynamegenerators.com/kingdom-names.php
 
 For character images
