@@ -89,5 +89,5 @@ containers;
 skeleton bones of functionality by Saturday;
 start with player 2 character selection page and functionality; 
 html page start and some css (grid or flexbox) to make skeleton; 
-javascript, class/object for each characters to pull from object constructor; 
+javascript, class/object for each characters to pull from object constructor; completed 2pm 03/12/2020
 focus on battling- (2 attack options (example: attack/defend) to be displayed in DOM health/attack power); until one loses. 

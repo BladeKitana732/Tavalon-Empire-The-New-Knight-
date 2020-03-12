@@ -24,7 +24,7 @@ let Game = {
                 player = new Character(characterType,250,20,50);
                 break;
             default:
-                return "No character chosen"
+                return alert("No character chosen")
         }
 
         //variable to link with html div id="character boxes"
