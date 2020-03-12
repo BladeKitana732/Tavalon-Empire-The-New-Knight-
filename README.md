@@ -71,4 +71,11 @@ game using html, css and javascript
 1. Tweaks and advance HTML/CSS (animations)
 
 
+### References/Resource links 
+
+For kingdom name 
+https://www.fantasynamegenerators.com/kingdom-names.php
+
+For character images
+https://www.artstation.com/
 
