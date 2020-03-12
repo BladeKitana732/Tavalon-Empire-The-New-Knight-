@@ -27,7 +27,7 @@ game using html, css and javascript
 ![wireframe]()
 
 #### Necromancer
-![necromancer](./necromancer_avatar.jpg)
+![necromancer](./wireframes./necromancer_avatar.jpg)
 
 #### Warrior
 ![warrior]()
