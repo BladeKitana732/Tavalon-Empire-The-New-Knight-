@@ -10,29 +10,29 @@ game using html, css and javascript
 &
 
 #### Solo page (charcater selection)
-![wireframe](./wireframePic1.jpg)
+![wireframe](./wireframes/wireframePic1.jpg)
  
 #### Gameplay solo page (text adventure begins!)
 
 &
 
 #### 2 player (comp or user) & (character selection)
-![wireframe](./wireframePic2.jpg)
+![wireframe](./wireframes/wireframePic2.jpg)
 
 #### 2 player gameplay display
-![wireframe](.wireframePic3.jpg)
+![wireframe](./wireframes/wireframePic3.jpg)
 
 #### Necromancer
-![necromancer]()
+![necromancer](./wireframes/necromancer_avatar.jpg)
 
 #### Warrior
-![warrior]()
+![warrior](./wireframes/warrior_avatar.jpg)
 
 #### Healer
-![healer]()
+![healer](./wireframes/healer_avatar.jpg)
 
 #### Archer 
-![archer]()
+![archer](./wireframes/archer_avatar.jpg)
 
 
 
