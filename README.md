@@ -55,7 +55,7 @@ game using html, css and javascript
 
 ### Thursday
 1. JS
-2. Player objects 
+2. Player objects
 
 ### Friday
 1. JS

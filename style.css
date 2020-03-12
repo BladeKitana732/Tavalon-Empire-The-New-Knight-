@@ -8,6 +8,43 @@
 } */
 
 img {
-    width: 140px
+    width: 140px;
+    border: solid 2px black;
+    margin: 10px;
+    padding: 10px;
 }
+
+#header {
+    text-align: center;
+    font-size: large;
+    font-family: fantasy;
+}
+
+/* test style flex */
+/* .character_boxes {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: space-around;
+    border: solid 2px purple;
+} */
+
+.character_boxes div {
+    border: solid 2px blue;
+    /* display: flex; */
+
+
+}
+
+/* .header_description {
+    border: solid 2px blue;
+    display: flex;
+    flex-direction: column; 
+    flex-wrap: ;
+
+} */
+
+/* test style grid */
+
+
 

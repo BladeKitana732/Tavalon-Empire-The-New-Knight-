@@ -15,7 +15,7 @@ let Game = {
                 player = new Character(characterType,200,25,60);
                 break;
             case "Healer":
-                player = new Character(characterType,300,10,70);
+                player = new Character(characterType,200,35,100);
                 break;
             case "Warrior" :
                 player = new Character(characterType,200,30,60);
