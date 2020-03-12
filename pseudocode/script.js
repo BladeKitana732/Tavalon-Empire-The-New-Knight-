@@ -22,7 +22,8 @@ class character {
 
 
 //code 2 test: object function (blueprint to run new variables through)
-function Characters(health, attack, defense) {
+function Characters(name,health, attack, defense) {
+    this.name = name;
     this.health = health;
     this.attack = attack;
     this.defense = defense;
@@ -30,7 +31,7 @@ function Characters(health, attack, defense) {
 
 //instance for code 2 test
 
-let Necromancer = new Characters(100,20,50);
+let Necromancer = new Characters('Necromancer',100,20,50);
 
 console.log(Necromancer)
 
