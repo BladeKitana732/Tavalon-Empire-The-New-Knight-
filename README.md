@@ -39,7 +39,7 @@ game using html, css and javascript
 ## Game instruction && rules for "RPG"
 1. Must go through village to get to Castle and get knighted.
 2. Must make choices that effect the journey outcomes.
-3. Must make a choice within a timed manner; countdown varies dependent on situation; choice randomly picked if no selection is made from user ex) battle encounter choice timer set to 15seconds; path/action choice. 
+3. Must make a choice within a timed manner; countdown varies dependent on situation; choice randomly picked if no selection is made from user ex) battle encounter choice timer set to 15seconds; path/action choice 30 seconds. 
 4. Must battle; each character has a special weapon that carries different endings if choice is made to find special weapon along journey (easter egg/NOT NEEDED not win game). *Solo game mode only*
 5. Game runs until in castle and knighted by Queen; solo mode will have user meet all other characters outside of character list whether to battle or recruit as an ally. 
 6. IF 2 player mode is selected with user, have screen "split" where both sides make a choice within a longer time limit than solo time limits for choices. 
