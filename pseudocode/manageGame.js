@@ -26,6 +26,8 @@ let Game = {
             default:
                 return "No character chosen"
         }
+
+        
     },
 
     setBattle: function () {
