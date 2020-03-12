@@ -6,45 +6,43 @@ game using html, css and javascript
 ### Wireframe 
 
 ##### Loading/Home Game Page (buttons to choose solo, w. comp, w. user)
-![wireframe](./rpg-wireframe.jpg)
+![wireframe]()
 
 #### Solo page (charcater selection)
-![wireframe](./rpg-wireframe.jpg)
+![wireframe]()
 
 #### 2 player (comp or user) & (character selection)
-![wireframe](./rpg-wireframe.jpg)
+![wireframe]()
 
 #### Gameplay solo page (text adventure begins!)
-![wireframe](./rpg-wireframe.jpg)
+![wireframe]()
 
 #### Gameplay 2 player page (text adventure begins!)
-![wireframe](./rpg-wireframe.jpg)
+![wireframe]()
 
 #### Solo game win
-![wireframe](./rpg-wireframe.jpg)
+![wireframe]()
 
 #### 2 player game win
-![wireframe](./rpg-wireframe.jpg)
+![wireframe]()
 
 #### Necromancer
-![wireframe](./necromancer_avatar.jpg)
+![necromancer](./necromancer_avatar.jpg)
 
 #### Warrior
-![wireframe](./rpg-wireframe.jpg)
+![warrior](./warrior_avatar.jpg)
 
 #### Healer
-![wireframe](./rpg-wireframe.jpg)
+![healer](./healer_avatar.jpg)
 
 #### Archer 
-![wireframe](./rpg-wireframe.jpg)
-
-
+![archer](./archer_avatar.jpg)
 
 
 
 ## Game instruction && rules for RPG
-1.
-2.
+1. Must go through village to get to Castle and get knighted.
+2. 
 3.
 4.
 5.
