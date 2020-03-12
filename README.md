@@ -1,4 +1,4 @@
-# projectGame1
+# Tavalon Empire: The New Knight
 game using html, css and javascript 
 
 ## 
@@ -79,3 +79,15 @@ https://www.fantasynamegenerators.com/kingdom-names.php
 For character images
 https://www.artstation.com/
 
+
+#### Notes from meeting 
+
+MVP focuses:
+
+styling last;
+containers;
+skeleton bones of functionality by Saturday;
+start with player 2 character selection page and functionality; 
+html page start and some css (grid or flexbox) to make skeleton; 
+javascript, class/object for each characters to pull from object constructor; 
+focus on battling- (2 attack options (example: attack/defend) to be displayed in DOM health/attack power); until one loses. 
