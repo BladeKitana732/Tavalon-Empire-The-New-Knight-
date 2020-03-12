@@ -1,10 +1,11 @@
 // pseudo code 
 
-//object constructor for characters. 
+//test of how to get data from characters
 
-// Initialize constructor for characters 
 
-class characters {
+// code 1 test: Initialize class constructor for characters 
+
+class character {
     constructor(health,attack,defense,special) {
         this.health = health;
         this.attack = attack;
@@ -16,11 +17,24 @@ class characters {
         return this.health;
     }
 
-    
+
 }
 
-  
-  // Initialize individual character instances
+
+//code 2 test: object function (blueprint to run new variables through)
+function Characters(health, attack, defense) {
+    this.health = health;
+    this.attack = attack;
+    this.defense = defense;
+}
+
+//instance for code 2 test
+
+let Necromancer = new Characters(100,20,50);
+
+console.log(Necromancer)
+
+ 
  
 
 
