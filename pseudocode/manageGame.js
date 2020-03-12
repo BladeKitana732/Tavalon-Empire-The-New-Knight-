@@ -27,7 +27,10 @@ let Game = {
                 return "No character chosen"
         }
 
-        
+        //variable to link with html div id="character boxes"
+
+        let getCharacter = document.querySelector(".character_boxes");
+        getCharacter.innerHTML = '<img src="wireframes/characters/' + characterType.toLowerCase() + '.jpg" class="wireframes/characters"><div><h3>' + characterType + '</h3><p>Health: ' + player.health + '</p><p>Attack: ' + player.attack + '</p><p>Defense: '</p>
     },
 
     setBattle: function () {
