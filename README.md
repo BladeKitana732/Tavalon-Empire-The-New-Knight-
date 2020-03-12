@@ -6,28 +6,24 @@ game using html, css and javascript
 ### Wireframe 
 
 ##### Loading/Home Game Page (buttons to choose solo, w. comp, w. user)
-![wireframe]()
+
+&
 
 #### Solo page (charcater selection)
-![wireframe]()
+![wireframe](./wireframePic1.jpg)
+ 
+#### Gameplay solo page (text adventure begins!)
+
+&
 
 #### 2 player (comp or user) & (character selection)
-![wireframe]()
+![wireframe](./wireframePic2.jpg)
 
-#### Gameplay solo page (text adventure begins!)
-![wireframe]()
-
-#### Gameplay 2 player page (text adventure begins!)
-![wireframe]()
-
-#### Solo game win
-![wireframe]()
-
-#### 2 player game win
-![wireframe]()
+#### 2 player gameplay display
+![wireframe](.wireframePic3.jpg)
 
 #### Necromancer
-![necromancer](./wireframes./necromancer_avatar.jpg)
+![necromancer]()
 
 #### Warrior
 ![warrior]()
@@ -40,10 +36,39 @@ game using html, css and javascript
 
 
 
-## Game instruction && rules for RPG
+## Game instruction && rules for "RPG"
 1. Must go through village to get to Castle and get knighted.
-2. 
-3.
-4.
-5.
-6.
+2. Must make choices that effect the journey outcomes.
+3. Must make a choice within a timed manner; countdown varies dependent on situation; choice randomly picked if no selection is made from user ex) battle encounter choice timer set to 15seconds; path/action choice. 
+4. Must battle; each character has a special weapon that carries different endings if choice is made to find special weapon along journey (easter egg/NOT NEEDED not win game). *Solo game mode only*
+5. Game runs until in castle and knighted by Queen; solo mode will have user meet all other characters outside of character list whether to battle or recruit as an ally. 
+6. IF 2 player mode is selected with user, have screen "split" where both sides make a choice within a longer time limit than solo time limits for choices. 
+7. IF 2 player mode is selected with computer, just add functionality for computer to randomly make a choice in two cases: 1) when user makes a choice; 2) if user fails to make a choice and it randomizes choice for user. 
+8. Game over when die in battle, or did not get knighted. 
+9. If 2 player game mode selected, the users cannot be the same character. Example, if user 1 picks Archer, user 2 is left with remaining 3 choices of Healer, Necromancer, and Warrior. 
+
+
+## Schedule (Objectives/Goals)
+### Wednesday
+1. Wireframes
+2. Pseudo code
+
+### Thursday
+1. JS
+2. Player objects 
+
+### Friday
+1. JS
+2. boardGame function! 
+
+### Saturday
+1. HTML/CSS
+
+### Sunday
+1. HTML/CS + JS
+
+### Monday
+1. Tweaks and advance HTML/CSS (animations)
+
+
+
