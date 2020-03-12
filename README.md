@@ -30,13 +30,13 @@ game using html, css and javascript
 ![necromancer](./necromancer_avatar.jpg)
 
 #### Warrior
-![warrior](./warrior_avatar.jpg)
+![warrior]()
 
 #### Healer
-![healer](./healer_avatar.jpg)
+![healer]()
 
 #### Archer 
-![archer](./archer_avatar.jpg)
+![archer]()
 
 
 
