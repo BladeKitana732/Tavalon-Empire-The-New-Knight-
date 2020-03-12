@@ -21,20 +21,20 @@ img {
 }
 
 /* test style flex */
-/* .character_boxes {
+.character_boxes {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    align-content: space-around;
+    align-content: ;
     border: solid 2px purple;
-} */
-
-.character_boxes div {
-    border: solid 2px blue;
-    /* display: flex; */
-
-
 }
+
+/* .character_boxes div {
+    border: solid 2px blue;
+    display: flex;
+
+
+} */
 
 /* .header_description {
     border: solid 2px blue;
@@ -44,7 +44,8 @@ img {
 
 } */
 
-/* test style grid */
+
+
 
 
 
