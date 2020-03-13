@@ -12,16 +12,16 @@ let Game = {
     resetPlayer: function(characterType) {
         switch(characterType) {
             case "Necromancer":
-                player = new Character(characterType,200,25,60);
+                player = new Character(characterType,100,30,60);
                 break;
             case "Healer":
-                player = new Character(characterType,200,35,100);
+                player = new Character(characterType,150,25,70);
                 break;
             case "Warrior" :
-                player = new Character(characterType,200,30,60);
+                player = new Character(characterType,100,30,60);
                 break;
             case "Archer" :
-                player = new Character(characterType,250,20,50);
+                player = new Character(characterType,100,30,70);
                 break;
             default:
                 return alert("No character chosen")

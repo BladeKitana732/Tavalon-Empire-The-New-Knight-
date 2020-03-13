@@ -73,7 +73,8 @@ p {
     border: solid 2px red;
     flex: -1;
     flex-basis: 30%;
-    width: 40%;     
+    width: 40%;
+    height: 350px;     
 }
 
 
