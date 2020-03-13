@@ -9,7 +9,7 @@
 
 img {
     width: 140px;
-    /* border: solid 2px black; */
+    border: solid 2px black;
     margin: 10px;
     padding: 10px;
 }
@@ -21,10 +21,11 @@ img {
 }
 
 .parentContainer {
-    /* border: solid 2px black; */
+    border: solid 2px black;
     display: flex;
-    flex-wrap: wrap;
-    align-content: space-evenly;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    /* align-content: space-evenly; */
     height: 100%;
     
 
@@ -32,26 +33,27 @@ img {
 
 .divBlock0 {
     flex: 2;
-    /* border: solid 2px purple; */
+    border: solid 2px purple;
     flex-basis: 30%;
+    
     
 }
 
 .divBlock1 {
     flex: 2;
-    /* border: solid 2px purple; */
+    border: solid 2px purple;
     flex-basis: 30%;
 }
 
 .divBlock2 {
     flex: 2;
-    /* border: solid 2px purple; */
+    border: solid 2px purple;
     flex-basis: 30%;
 }
 
 .divBlock3 {
     flex: 2;
-    /* border: solid 2px purple; */
+    border: solid 2px purple;
     flex-basis: 30%;
 }
 
@@ -60,6 +62,13 @@ p {
     padding: 10px;
     margin: 10px;
     font-family: fantasy;
+}
+
+.playerSelectionBlock {
+    border: solid 2px red;
+    flex-basis: 30%;
+    
+    
 }
 
 
