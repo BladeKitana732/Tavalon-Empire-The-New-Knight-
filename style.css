@@ -23,13 +23,14 @@ img {
 .parentContainer {
     border: solid 2px black;
     display: flex;
-    flex-direction: row;
-
+    align-items: center;
+    
 
 }
 
 .divBlock0 {
     flex: 1;
+    
 }
 
 .divBlock1 {

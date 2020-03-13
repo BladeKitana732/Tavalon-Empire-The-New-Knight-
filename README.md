@@ -79,6 +79,10 @@ https://www.fantasynamegenerators.com/kingdom-names.php
 For character images
 https://www.artstation.com/
 
+necromancer info 
+https://thilkey.wordpress.com/2010/10/31/necromancers-abilities-and-powers/
+
+
 
 #### Notes from meeting 
 
