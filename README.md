@@ -94,7 +94,8 @@ https://www.emberwindgame.com/game/classes/archer/
 2 player functionality 
 https://www.youtube.com/watch?v=CxmEzRTKduE
 
-
+text adventure 
+https://www.youtube.com/watch?v=R1S_NhKkvGA&t=551s
 
 #### Notes from meeting 
 
