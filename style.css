@@ -30,7 +30,7 @@ img {
 
 .divBlock0 {
     flex: 1;
-    
+    border: solid 2px purple
 }
 
 .divBlock1 {
@@ -45,7 +45,12 @@ img {
     flex: 1;
 }
 
-
+p {
+    border: solid 2px blue;
+    padding: 10px;
+    margin: 10px;
+    font-family: fantasy;
+}
 
 
 

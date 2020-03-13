@@ -82,6 +82,15 @@ https://www.artstation.com/
 necromancer info 
 https://thilkey.wordpress.com/2010/10/31/necromancers-abilities-and-powers/
 
+healer info 
+https://forums.rpgmakerweb.com/index.php?threads/design-variety-in-healers.64430/
+
+warrior info 
+https://en.wikipedia.org/wiki/Warrior_(character_class)
+
+archer info 
+https://www.emberwindgame.com/game/classes/archer/
+
 
 
 #### Notes from meeting 
