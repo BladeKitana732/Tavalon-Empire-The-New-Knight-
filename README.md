@@ -23,16 +23,16 @@ game using html, css and javascript
 ![wireframe](./wireframes/wireframePic3.jpg)
 
 #### Necromancer
-![necromancer](./wireframes/necromancer_avatar.jpg)
+![necromancer](./wireframes/characters/necromancer.jpg)
 
 #### Warrior
-![warrior](./wireframes/warrior_avatar.jpg)
+![warrior](./wireframes/characters/warrior.jpg)
 
 #### Healer
-![healer](./wireframes/healer_avatar.jpg)
+![healer](./wireframes/characters/healer.jpg)
 
 #### Archer 
-![archer](./wireframes/archer_avatar.jpg)
+![archer](./wireframes/characters/archer.jpg)
 
 
 
