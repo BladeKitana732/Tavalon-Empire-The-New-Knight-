@@ -24,7 +24,6 @@ let Game = {
                 player = new Character(characterType,100,30,70);
                 break;
         }
-
         //variable to link with html div id="character boxes"
 
         let getCharacter = document.querySelector(".parent-container");

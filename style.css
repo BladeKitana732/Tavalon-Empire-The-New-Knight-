@@ -1,11 +1,11 @@
-/* * {
+* {
     margin: 0;
     padding: 0;
     border: 0;
     font-size: 100%;
-    font: inherit;
+    /* font: inherit; */
     vertical-align: baseline;
-} */
+}
 
 img {
     width: 140px;
@@ -14,17 +14,19 @@ img {
     padding: 10px;
 }
 
+
+
 #header {
     text-align: center;
     font-size: large;
     font-family: fantasy;
 }
 
-.parentContainer {
+/* .parentContainer {
     border: solid 4px black;
     display: flex;
     flex-direction: column;
-
+    
 }
 
 .row {
@@ -34,23 +36,52 @@ img {
   .player {
     border: 3px solid purple;
     width: 250px;
-    height: 298px;
+    height: 530px;
   }
   .character {
     border: 2px solid green;
-    width: 400px;
+    width: 800px;
+    flex-wrap: wrap;
+    
     
   }
 
+  .description {
+      text-align: right;
+  } */
 
 
 p {
-    /* border: solid 2px blue; */
+    border: solid 2px blue;
     padding: 10px;
     margin: 10px;
     font-family: fantasy;
 }
 
+h3 {
+    font-family: fantasy;
+    font-size: 30px;
+}
+
+
+/* testing grid */
+.wrapper {
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+}
+
+
+
+
+
+.wrapper > div {
+    background: gray;
+    padding: 1em;
+}
+
+.wrapper > div:nth-child(odd) {
+    background: silver;
+}
 
 
 
