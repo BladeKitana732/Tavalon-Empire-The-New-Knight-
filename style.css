@@ -14,7 +14,10 @@ img {
     padding: 10px;
 }
 
-
+div {
+    font-family: fantasy;
+    font-size: 15px;
+}
 
 #header {
     text-align: center;
@@ -51,12 +54,12 @@ img {
   } */
 
 
-p {
+/* p {
     border: solid 2px blue;
     padding: 10px;
     margin: 10px;
     font-family: fantasy;
-}
+} */
 
 h3 {
     font-family: fantasy;
@@ -67,10 +70,13 @@ h3 {
 /* testing grid */
 .wrapper {
     display: grid;
-    grid-template-columns: 30% 30% 30%;
+    grid-template-columns:2fr 1fr 2fr;
 }
 
-
+.nested {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
 
 
 
@@ -81,6 +87,7 @@ h3 {
 
 .wrapper > div:nth-child(odd) {
     background: silver;
+    padding: 1em;
 }
 
 
