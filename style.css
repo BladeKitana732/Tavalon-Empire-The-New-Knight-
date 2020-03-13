@@ -17,6 +17,7 @@ img {
 div {
     font-family: fantasy;
     font-size: 15px;
+    
 }
 
 #header {
@@ -25,6 +26,7 @@ div {
     font-family: fantasy;
 }
 
+/* failed flexbox test */
 /* .parentContainer {
     border: solid 4px black;
     display: flex;
@@ -91,7 +93,7 @@ h3 {
 }
 
 
-
+/* gameplay page */
 
 #storyPage {
     padding: 0;

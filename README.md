@@ -97,6 +97,9 @@ https://www.youtube.com/watch?v=CxmEzRTKduE
 text adventure 
 https://www.youtube.com/watch?v=R1S_NhKkvGA&t=551s
 
+all art 
+https://www.artstation.com/
+
 #### Notes from meeting 
 
 MVP focuses:

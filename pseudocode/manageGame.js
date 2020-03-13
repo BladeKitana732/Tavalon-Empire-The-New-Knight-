@@ -35,3 +35,7 @@ let Game = {
     },
 
 }
+
+//textAdventure/gameplay 
+
+const textAdventure = document.getElementById('text')
