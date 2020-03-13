@@ -29,7 +29,7 @@ let Game = {
 
         //variable to link with html div id="character boxes"
 
-        let getCharacter = document.querySelector(".character_boxes");
+        let getCharacter = document.querySelector(".parentContainer");
         getCharacter.innerHTML = '<img src="wireframes/characters/' + characterType.toLowerCase() + '.jpg" class="wireframes/characters"><div><h3>' + characterType + '</h3><p>Health: ' + player.health + '</p><p>Attack: ' + player.attack + '</p><p>Defense: ' + player.defense + '</p></div>';
     },
 

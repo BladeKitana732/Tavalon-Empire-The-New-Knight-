@@ -20,7 +20,29 @@ img {
     font-family: fantasy;
 }
 
+.parentContainer {
+    border: solid 2px black;
+    display: flex;
+    flex-direction: row;
 
+
+}
+
+.divBlock0 {
+    flex: 1;
+}
+
+.divBlock1 {
+    flex: 1;
+}
+
+.divBlock2 {
+    flex: 1;
+}
+
+.divBlock3 {
+    flex: 1;
+}
 
 
 
