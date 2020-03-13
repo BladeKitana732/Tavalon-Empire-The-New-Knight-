@@ -11,12 +11,12 @@ function Character(characterType, health, attack, defense) {
 }
 
 //global enemy variable 
-let enemy;
+// let enemy;
 
-function Opponent(opponentType, health, attack, defense) {
-    this.opponentType = opponentType;
-    this.health = health;
-    this.attack = attack;
-    this.defense = defense;
-    // this.special = special; 
-}
+// function Opponent(opponentType, health, attack, defense) {
+//     this.opponentType = opponentType;
+//     this.health = health;
+//     this.attack = attack;
+//     this.defense = defense;
+//     // this.special = special; 
+// }

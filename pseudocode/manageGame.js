@@ -23,13 +23,11 @@ let Game = {
             case "Archer" :
                 player = new Character(characterType,100,30,70);
                 break;
-            default:
-                return alert("No character chosen")
         }
 
         //variable to link with html div id="character boxes"
 
-        let getCharacter = document.querySelector(".parentContainer");
+        let getCharacter = document.querySelector(".character");
         getCharacter.innerHTML = '<img src="wireframes/characters/' + characterType.toLowerCase() + '.jpg" class="wireframes/characters"><div><h3>' + characterType + '</h3><p>Health: ' + player.health + '</p><p>Attack: ' + player.attack + '</p><p>Defense: ' + player.defense + '</p></div>';
     },
 
