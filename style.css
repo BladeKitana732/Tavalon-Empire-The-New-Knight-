@@ -106,16 +106,30 @@ h3 {
 
 .container {
     width: 900px;
-    max-width: 70%;
+    max-width: 50%;
     background-color: white;
     padding: 10px;
     border-radius: 5px;
     box-shadow: 0 0 10px 2px;
+    height: 30%
 }
 
 .btn-grid {
     display: grid;
     grid-template-columns: repeat(2, auto);
-    gap: 5px;
-    margin-top: 10px;
+    gap: 20px;
+    margin-top: 60px;
+}
+
+.btn {
+    background-color: bisque;
+    border: solid 2px brown;
+    border-radius: 5px;
+    padding: 5px 10px;
+    color: black;
+    outline: none;
+}
+
+.btn:hover {
+    border-color: darkcyan;
 }
