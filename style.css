@@ -21,46 +21,28 @@ img {
 }
 
 .parentContainer {
-    /* border: solid 2px black; */
+    border: solid 4px black;
     display: flex;
-    flex-flow: row wrap;
-    /* align-content: space-evenly; */
-    height: 100%;
-    width: 100%;
+    flex-direction: column;
 
 }
 
-.divBlock0 {
-    flex: -1;
-    /* border: solid 2px purple; */
-    flex-basis: 30%;
-    width: 40%;
-    height: 40%;   
+.row {
+    border: 3px solid red;
+    display: flex;
+  }
+  .player {
+    border: 3px solid purple;
+    width: 250px;
+    height: 298px;
+  }
+  .character {
+    border: 2px solid green;
+    width: 400px;
     
-}
+  }
 
-.divBlock1 {
-    flex: -1;
-    /* border: solid 2px purple; */
-    flex-basis: 30%;
-    width: 40%;
-    height: 40%  
-}
 
-.divBlock2 {
-    flex: ;
-    /* border: solid 2px purple; */
-    flex-basis: 30%;
-    width: 40%;
-    height: 40%  
-}
-
-.divBlock3 {
-    flex: -1;
-    /* border: solid 2px purple; */
-    flex-basis: 30%;
-    width: 40%;;
-}
 
 p {
     /* border: solid 2px blue; */
@@ -69,13 +51,6 @@ p {
     font-family: fantasy;
 }
 
-.playerSelectionBlock {
-    border: solid 2px red;
-    flex: -1;
-    flex-basis: 30%;
-    width: 40%;
-    height: 350px;     
-}
 
 
 
