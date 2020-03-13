@@ -91,6 +91,9 @@ https://en.wikipedia.org/wiki/Warrior_(character_class)
 archer info 
 https://www.emberwindgame.com/game/classes/archer/
 
+2 player functionality 
+https://www.youtube.com/watch?v=CxmEzRTKduE
+
 
 
 #### Notes from meeting 
