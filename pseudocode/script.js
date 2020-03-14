@@ -64,9 +64,10 @@ function startJourney () {
     textNode(1)
 }
 
-//to ensure the current textNode index is what is being shown
+//to ensure the current textNode index is what is being shown must set the id textNode equal to textNodeIndex parameter 
 function textNode (textNodeIndex) {
-    const textNode = textNodes.find(textNode )
+    const textNode = textNodes.find(textNode => textNode.id === textNodeIndex)
+    textElement.innerText = textNodes.text
 }
 
 function choiceSelection (choice) {
@@ -80,14 +81,14 @@ const textNodes = [
         text: '',
         choices: [ 
             {
-                text: 'choice 1'
+                text: 'choice 1',
                 setState: {rightChoice: true},
                 nextNode: 2
          },
 
          {
-            text: 'choice 2'
-            nextNode: 2
+            text: 'choice 2',
+            nextNode: 2,
 
          },
     
