@@ -64,10 +64,11 @@ function startJourney () {
     textNode(1)
 }
 
-//to ensure the current textNode index is what is being shown must set the id textNode equal to textNodeIndex parameter 
+//to ensure the current textNode index is what is being shown must set the id textNode equal to textNodeIndex parameter
+//using method of .text on const textNode to pull journey state/path player is currently in the story game  
 function textNode (textNodeIndex) {
-    const textNode = textNodes.find(textNode => textNode.id === textNodeIndex)
-    textElement.innerText = textNodes.text
+    const textNode = textNodes.find(textNode => textNode.path === textNodeIndex)
+    textElement.innerText = textNode.text
 }
 
 function choiceSelection (choice) {
@@ -77,8 +78,8 @@ function choiceSelection (choice) {
 
 const textNodes = [
     {
-        choice: 1,
-        text: '',
+        path: 1,
+        text: 'journey description',
         choices: [ 
             {
                 text: 'choice 1',
