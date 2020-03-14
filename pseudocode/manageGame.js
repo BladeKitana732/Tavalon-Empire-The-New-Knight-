@@ -36,3 +36,95 @@ let Game = {
 
 }
 
+
+//story html functionality 
+
+const textElement = document.getElementById('textElement');
+const choiceButtonsElement = document.getElementById('choice-buttons');
+
+let state = {};
+
+function startJourney() {
+    state = {}
+    pathArrayDisplay(1)
+    
+  }
+
+  function showSelection(choice) {
+    return choice.requiredState == null || choice.requiredState(state)
+  }
+
+  
+  function choiceSelection(choice) {  
+    const nextPathNum = choice.nextPath
+    state = Object.assign(state, choice.setState)
+    pathArrayDisplay(nextPathNum)
+  }
+
+
+  function pathArrayDisplay(arrayIndex) {
+    const selection = pathArray.find(selection => selection.path === arrayIndex)
+    textElement.innerText = selection.text
+    while(choiceButtonsElement.firstChild) {
+        choiceButtonsElement.removeChild(choiceButtonsElement.firstChild)
+      }
+
+      selection.choices.forEach(choice => {
+        if(showSelection(choice)){
+          const button = document.createElement('button')
+          button.innerText = choice.text
+          button.classList.add('btn')
+          button.addEventListener('click', () => choiceSelection(choice))
+          choiceButtonsElement.appendChild(button)
+        }
+      })
+    }
+
+
+    const pathArray = [
+        {
+          path: 1,
+          text: 'path1',
+          choices: [
+            {
+              text: 'button1',
+              setState: { choice1: true},
+              nextPath: 2,
+            },
+      
+            {
+              text: 'button2',
+              nextPath: 2
+            },
+          ]
+        },
+      
+        {
+          path: 2,
+          text: 'path2',
+          choices: [
+            {
+              text: 'path2button1',
+              requiredState: (currentState) => currentState.choice1,
+              setState: {path2text: true, choice1: false},
+              nextPath: 3
+      
+            },
+      
+            {
+              text: 'path2button2',
+              requiredState: (currentState) => currentState.choice1,
+              setState: {path2text: true, choice1: false},
+              nextPath: 3
+            },
+      
+            {
+              text: 'path2button3',
+              nextPath: 3
+            }
+          ]
+      
+        }
+      ]
+      
+      startJourney()
