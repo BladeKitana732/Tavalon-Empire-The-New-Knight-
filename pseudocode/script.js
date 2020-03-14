@@ -49,10 +49,10 @@ console.log(Necromancer)
 
 //text adventure code tests 
 
-//test 1
+//test 1 
 
 const textElement = document.getElementById('text');
-const buttonsElement = document.getElementById('choice-buttons');
+const choiceButtons = document.getElementById('choice-buttons');
 
 //keeps track of choices made
 let state = {};
