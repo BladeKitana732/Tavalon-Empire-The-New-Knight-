@@ -51,7 +51,7 @@ console.log(Necromancer)
 
 //test 1 
 
-const textElement = document.getElementById('text');
+const textElement = document.getElementById('textElement');
 const choiceButtons = document.getElementById('choice-buttons');
 
 //keeps track of choices made
