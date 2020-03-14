@@ -1,4 +1,4 @@
-// pseudo code 
+// pseudo code //code tests for gameplay 
 
 //test of how to get data from characters
 
@@ -46,3 +46,8 @@ console.log(Necromancer)
 
 
 // IF 2 player mode is selected with computer, just add functionality for computer to randomly make a choice in two cases: 1) when user makes a choice; 2) if user fails to make a choice and it randomizes choice for user. 
+
+//text adventure code tests 
+
+//test 1
+
