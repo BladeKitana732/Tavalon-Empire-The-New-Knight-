@@ -76,12 +76,12 @@ function textNode (textNodeIndex) {
 
     }
     //this is going to pull choices needed to be seen only based on state/journey path with if statement & eventlistner
-    textNode.choices.forEach(choice => {
-        if(choiceSelection(choice)) {
+    textNode.choice.forEach(choice => {
+        if(showSelection(choice)) {
             const button = document.createElement('button')
             button.innerText = choice.text
             button.classList.add('btn')
-            button.addEventListener('click', () => choiceSelection(choice))
+            button.addEventListener('click', () => showSelection(choice))
             buttonsElement.appendChild(button)
         }
 
@@ -92,8 +92,16 @@ function textNode (textNodeIndex) {
 
 }
 
-function choiceSelection (choice) {
-    return true
+//this function displays the current button options available based on the choice made by user properly and state(decision)
+function showSelection (choice) {
+    return choice.requiredState == null || choice.requiredState(state)
+}
+
+//this function to pull next textNode(path); takes current state and pulls from choice.setState to bring a brand new object for current state //nextTextNodeId is a const cause it is a paramester that will be ran through another function to pull this off
+function selectChoice(choice) {
+    const textNode = choice.nextText
+    state = Object.assign(state, choice.setState)
+    showTextNode(textNode)
 }
 
 //variable of paths and choices(it is an array with nested objects to go iterate through the paths with properties of path and text to show current stage in story mode and objects w/in these objects to iterate through the choices and next action)
@@ -101,18 +109,48 @@ const textNodes = [
     {
         path: 1,
         text: 'journey description',
-        choices: [ 
+        choice: [ 
             {
-                text: 'choice 1',
+                text: 'clickme 1',
                 setState: {rightChoice: true},
                 nextNode: 2
          },
 
          {
-            text: 'choice 2',
+            text: 'clickme 2',
             nextNode: 2,
 
          }
+    
+        ]
+
+    },
+    //if needed i can add a required function to make sure they right items are collected for next path 
+    {
+        path: 2,
+        text: 'journey path2',
+        choice: [ 
+         {
+            text: 'pathChoice1',
+            requiredState: (currentState) => currentState.rightChoice
+            setState: {rightChoice: false, pathChoice1: true}
+            nextNode: 3
+         },
+
+         {
+            text: 'pathChoice2',
+            requiredState: (currentState) => currentState.rightChoice
+            setState: {rightChoice: false, pathChoice2: true}
+            nextNode: 3
+         },
+
+         {
+            text: 'pathChoice3',
+            // requiredState: (currentState) => currentState.rightChoice,
+            // setState: {rightChoice: false, pathChoice3: true},
+            nextNode: 3
+         }
+
     
         ]
 
