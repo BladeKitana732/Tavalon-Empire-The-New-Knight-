@@ -51,3 +51,65 @@ console.log(Necromancer)
 
 //test 1
 
+const textElement = document.getElementById('text');
+const buttonsElement = document.getElementById('choice-buttons');
+
+//keeps track of choices made
+let state = {};
+
+
+
+function startJourney () {
+    state = {},
+    textNode(1)
+}
+
+//to ensure the current textNode index is what is being shown
+function textNode (textNodeIndex) {
+    const textNode = textNodes.find(textNode )
+}
+
+function choiceSelection (choice) {
+
+}
+
+
+const textNodes = [
+    {
+        choice: 1,
+        text: '',
+        choices: [ 
+            {
+                text: 'choice 1'
+                setState: {rightChoice: true},
+                nextNode: 2
+         },
+
+         {
+            text: 'choice 2'
+            nextNode: 2
+
+         },
+    
+         {
+             id: 2
+         }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+        ]
+
+
+    }
+
+
+]
+
+startJourney()
