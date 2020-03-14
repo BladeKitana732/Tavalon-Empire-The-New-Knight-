@@ -52,13 +52,13 @@ console.log(Necromancer)
 //test 1 
 
 const textElement = document.getElementById('textElement');
-const choiceButtons = document.getElementById('choice-buttons');
+const choiceButtonsElement = document.getElementById('choice-buttons');
 
 //keeps track of choices made
 let state = {};
 
 
-
+//starts game
 function startJourney () {
     state = {},
     textDisplay(1)
@@ -66,42 +66,23 @@ function startJourney () {
 
 //to ensure the current textNode index is what is being shown must set the id textNode equal to textNodeIndex parameter
 //using method of .text on const textNode to pull journey state/path player is currently in the story game  
-function textDisplay (textNodeIndex) {
-    const textNode = textNodes.find(textNode => textNode.path === textNodeIndex)
-    textElement.innerText = textNode.text;
+function textDisplay (textDisplayIndex) {
+   
     //while loop to show choices that affect THAT PATH ONLY (NOT EVERY PATH WILL HAVE 4 CHOICES) using child method b/c i made a choice button element (const buttonsElement) with a div and the buttons (child divs) is controlling node/story
 
-    while(buttonsElement.firstChild) {
-        buttonsElement.removeChild(buttonsElement.firstChild)
-
-    }
+    
     //this is going to pull choices needed to be seen only based on state/journey path with if statement & eventlistner
-    textNode.choice.forEach(choice => {
-        if(showSelection(choice)) {
-            const button = document.createElement('button')
-            button.innerText = choice.text
-            button.classList.add('btn')
-            button.addEventListener('click', () => showSelection(choice))
-            buttonsElement.appendChild(button)
-        }
-
-    })
+    
 
 
-
-
-}
 
 //this function displays the current button options available based on the choice made by user properly and state(decision)
-function showSelection (choice) {
-    return choice.requiredState == null || choice.requiredState(state)
-}
+function displayChoice (choice) {
+    
 
-//this function to pull next textNode(path); takes current state and pulls from choice.setState to bring a brand new object for current state //nextTextNodeId is a const cause it is a parameter that will be ran through another function to pull this off
+//this function to pull next textDisplay(path); takes current state and pulls from choice.setState to bring a brand new object for current state //nextTextNodeId is a const cause it is a parameter that will be ran through another function to pull this off
 function selectChoice(choice) {
-  const nextTextNodeId = choice.nextText
-  state = Object.assign(state, choice.setState)
-  textDisplay(nextTextNodeId)
+  
 }
 
 //variable of paths and choices(it is an array with nested objects to go iterate through the paths with properties of path and text to show current stage in story mode and objects w/in these objects to iterate through the choices and next action)
