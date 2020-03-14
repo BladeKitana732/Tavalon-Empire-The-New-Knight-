@@ -61,12 +61,12 @@ let state = {};
 
 function startJourney () {
     state = {},
-    textNode(1)
+    textDisplay(1)
 }
 
 //to ensure the current textNode index is what is being shown must set the id textNode equal to textNodeIndex parameter
 //using method of .text on const textNode to pull journey state/path player is currently in the story game  
-function textNode (textNodeIndex) {
+function textDisplay (textNodeIndex) {
     const textNode = textNodes.find(textNode => textNode.path === textNodeIndex)
     textElement.innerText = textNode.text;
     //while loop to show choices that affect THAT PATH ONLY (NOT EVERY PATH WILL HAVE 4 CHOICES) using child method b/c i made a choice button element (const buttonsElement) with a div and the buttons (child divs) is controlling node/story
@@ -97,11 +97,11 @@ function showSelection (choice) {
     return choice.requiredState == null || choice.requiredState(state)
 }
 
-//this function to pull next textNode(path); takes current state and pulls from choice.setState to bring a brand new object for current state //nextTextNodeId is a const cause it is a paramester that will be ran through another function to pull this off
+//this function to pull next textNode(path); takes current state and pulls from choice.setState to bring a brand new object for current state //nextTextNodeId is a const cause it is a parameter that will be ran through another function to pull this off
 function selectChoice(choice) {
-    const textNode = choice.nextText
-    state = Object.assign(state, choice.setState)
-    showTextNode(textNode)
+  const nextTextNodeId = choice.nextText
+  state = Object.assign(state, choice.setState)
+  textDisplay(nextTextNodeId)
 }
 
 //variable of paths and choices(it is an array with nested objects to go iterate through the paths with properties of path and text to show current stage in story mode and objects w/in these objects to iterate through the choices and next action)
@@ -132,15 +132,15 @@ const textNodes = [
         choice: [ 
          {
             text: 'pathChoice1',
-            requiredState: (currentState) => currentState.rightChoice
-            setState: {rightChoice: false, pathChoice1: true}
+            requiredState: (currentState) => currentState.rightChoice,
+            setState: {rightChoice: true, pathChoice1: true},
             nextNode: 3
          },
 
          {
             text: 'pathChoice2',
-            requiredState: (currentState) => currentState.rightChoice
-            setState: {rightChoice: false, pathChoice2: true}
+            requiredState: (currentState) => currentState.rightChoice,
+            setState: {rightChoice: true, pathChoice2: true},
             nextNode: 3
          },
 
