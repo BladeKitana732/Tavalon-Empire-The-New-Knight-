@@ -77,7 +77,7 @@ function startJourney() {
     pathArrayDisplay(nextPathNum)
   }
   
-  //this function is to pull the information from the array to be able to display selections/choices in DOM
+  //this function is to pull the information from the array to be able to display selections/choices based on current path in DOM
   function pathArrayDisplay(arrayIndex) {
     const selection = pathArray.find(selection => selection.path === arrayIndex)
     textElement.innerText = selection.text
