@@ -107,13 +107,14 @@ h3 {
 }
 
 .container {
-    width: 900px;
+    width: 600px;
     max-width: 50%;
     background-color: white;
     padding: 10px;
     border-radius: 5px;
     box-shadow: 0 0 10px 2px;
-    height: 30%
+    height: 30%;
+    
 }
 
 .btn-grid {
@@ -134,4 +135,13 @@ h3 {
 
 .btn:hover {
     border-color: darkcyan;
+}
+
+#player1 {
+    border: 2px solid gold;
+    display
+}
+
+#player2 {
+    border: 2px solid gold;
 }
