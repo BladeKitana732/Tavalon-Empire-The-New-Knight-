@@ -59,84 +59,91 @@ let state = {};
 
 
 //starts game
-function startJourney () {
-    state = {},
-    textDisplay(1)
-}
-
-//to ensure the current textNode index is what is being shown must set the id textNode equal to textNodeIndex parameter
-//using method of .text on const textNode to pull journey state/path player is currently in the story game  
-function textDisplay (textDisplayIndex) {
-   
-    //while loop to show choices that affect THAT PATH ONLY (NOT EVERY PATH WILL HAVE 4 CHOICES) using child method b/c i made a choice button element (const buttonsElement) with a div and the buttons (child divs) is controlling node/story
-
+function startJourney() {
+    state = {}
+    pathArrayDisplay(1)
     
-    //this is going to pull choices needed to be seen only based on state/journey path with if statement & eventlistner
-    
+  }
 
-
-
-//this function displays the current button options available based on the choice made by user properly and state(decision)
-function displayChoice (choice) {
-    
-
-//this function to pull next textDisplay(path); takes current state and pulls from choice.setState to bring a brand new object for current state //nextTextNodeId is a const cause it is a parameter that will be ran through another function to pull this off
-function selectChoice(choice) {
+  //this function is to ensure i am only displaying the choices that are needed choose from 
+  function showSelection(choice) {
+    return choice.requiredState == null || choice.requiredState(state)
+  }
   
-}
-
-//variable of paths and choices(it is an array with nested objects to go iterate through the paths with properties of path and text to show current stage in story mode and objects w/in these objects to iterate through the choices and next action)
-const textNodes = [
-    {
-        path: 1,
-        text: 'journey description',
-        choice: [ 
-            {
-                text: 'clickme 1',
-                setState: {rightChoice: true},
-                nextNode: 2
-         },
-
-         {
-            text: 'clickme 2',
-            nextNode: 2,
-
-         }
+  //this function is to ensure that AFTER player makes selection, it will continue on with journey with current choices based on current path number it is on. 
+  function choiceSelection(choice) {  
+    const nextPathNum = choice.nextPath
+    state = Object.assign(state, choice.setState)
+    pathArrayDisplay(nextPathNum)
+  }
+  
+  //this function is to pull the information from the array to be able to display selections/choices in DOM
+  function pathArrayDisplay(arrayIndex) {
+    const selection = pathArray.find(selection => selection.path === arrayIndex)
+    textElement.innerText = selection.text
     
-        ]
-
-    },
-    //if needed i can add a required function to make sure they right items are collected for next path 
-    {
-        path: 2,
-        text: 'journey path2',
-        choice: [ 
-         {
-            text: 'pathChoice1',
-            requiredState: (currentState) => currentState.rightChoice,
-            setState: {rightChoice: true, pathChoice1: true},
-            nextNode: 3
-         },
-
-         {
-            text: 'pathChoice2',
-            requiredState: (currentState) => currentState.rightChoice,
-            setState: {rightChoice: true, pathChoice2: true},
-            nextNode: 3
-         },
-
-         {
-            text: 'pathChoice3',
-            // requiredState: (currentState) => currentState.rightChoice,
-            // setState: {rightChoice: false, pathChoice3: true},
-            nextNode: 3
-         }
-
-    
-        ]
-
+//while loop to remove all options to add options that are needed only
+    while(choiceButtonsElement.firstChild) {
+      choiceButtonsElement.removeChild(choiceButtonsElement.firstChild)
     }
-
-]
-
-startJourney();
+  
+//pulling selection variable which holds the data of text needed to be displayed for choice selections with event listener to newly created button element to call choices properly through each selection 
+    selection.choices.forEach(choice => {
+      if(showSelection(choice)){
+        const button = document.createElement('button')
+        button.innerText = choice.text
+        button.classList.add('btn')
+        button.addEventListener('click', () => choiceSelection(choice))
+        choiceButtonsElement.appendChild(button)
+      }
+    })
+  }
+  
+  //array of path objects with nested objects for buttons/selections needed to be made for user to continue journey
+  const pathArray = [
+    {
+      path: 1,
+      text: 'path1',
+      choices: [
+        {
+          text: 'button1',
+          setState: { choice1: true},
+          nextPath: 2,
+        },
+  
+        {
+          text: 'button2',
+          nextPath: 2
+        },
+      ]
+    },
+  
+    {
+      path: 2,
+      text: 'path2',
+      choices: [
+        {
+          text: 'path2button1',
+          requiredState: (currentState) => currentState.choice1,
+          setState: {path2text: true, choice1: false},
+          nextPath: 3
+  
+        },
+  
+        {
+          text: 'path2button2',
+          requiredState: (currentState) => currentState.choice1,
+          setState: {path2text: true, choice1: false},
+          nextPath: 3
+        },
+  
+        {
+          text: 'path2button3',
+          nextPath: 3
+        }
+      ]
+  
+    }
+  ]
+  
+  startJourney()
