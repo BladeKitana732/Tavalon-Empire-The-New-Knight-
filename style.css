@@ -96,10 +96,10 @@ h3 {
 /* gameplay page */
 
 #storyPage {
-    border: solid 3px red;
+    /* border: solid 3px red; */
     padding: 0;
     margin: 0;
-   display: grid;
+   /* display: grid; */
     background-image: url(https://cdnb.artstation.com/p/assets/images/images/008/244/227/large/rui-padinha-porttown-v002.jpg?1511440745) ;
 }
 /* 
@@ -147,3 +147,17 @@ h3 {
 }
 
 
+.grid-item {
+    /* border: solid 4px blue; */
+    display: grid;
+
+
+}
+
+#grid-container {
+    /*   border: solid 6px red; */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 200px;
+   
+}
