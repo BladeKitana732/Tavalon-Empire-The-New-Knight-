@@ -86,7 +86,7 @@ function startJourney() {
       text: 'You wake up in a forest with your noble stead from hiding from guards the night prior. Searching the hut you lost your weapon. Only enough coin left for food and one small weapon. You: ',
       choices: [
         {
-          text: 'Take the forest to build a weapon yourself and gather food and water.',
+          text: 'Take on the forest to build a weapon yourself and gather food and water.',
           setState: { forest: true },
           nextPath: 2
         },
@@ -109,13 +109,9 @@ function startJourney() {
           nextPath: 3
         },
         {
-          text: 'Try and loot through it and head towards nearest kingdom',
-          requiredState: (currentState) => currentState.blueGoo,
-          setState: { blueGoo: false, shield: true },
-          nextPath: 3
-        },
-        {
-          text: 'Ignore the merchant',
+          text: 'Try and loot through it and build weapon',
+          requiredState: (currentState) => currentState.forest,
+          setState: { forest: false, looting: true },
           nextPath: 3
         }
       ]
@@ -124,18 +120,18 @@ function startJourney() {
 
     {
       path: 3,
-      text: 'After leaving the merchant you start to feel tired and stumble upon a small town next to a dangerous looking castle.',
+      text: 'After leaving the forest you approach a sign of a new land unexplored by you before. Tavalon Empire, it rings a bell of the generous Queen who is loved by all ruled by her. QUICK! You hear rustling around the trees, you:  ',
       choices: [
         {
-          text: 'Explore the castle',
+          text: 'Announce yourself and you have a weapon.',
           nextPath: 4
         },
         {
-          text: 'Find a room to sleep at in the town',
+          text: 'Hide in hopes they do not steal your stead and lay low until you see what is going on.',
           nextPath: 5
         },
         {
-          text: 'Find some hay in a stable to sleep in',
+          text: 'Ask aloud who is there and be battle ready.',
           nextPath: 6
         }
       ]
