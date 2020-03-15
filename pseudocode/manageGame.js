@@ -105,10 +105,10 @@ function startJourney() {
           text: 'On your ride on your stead you head to the forest to get materials to build a spear and collect food and water while at it. You come to a stump with a door too small for man but bigger than needed for an animal. You:',
           choices: [
             {
-              text: 'Knock and see if anything is inside.',
+              text: 'Knock and see if anything is inside. ',
               requiredState: (currentState) => currentState.forest,
               setState: { knock: true, forest: false},
-              nextPath: 3
+              nextPath: 4
       
             },
       
@@ -121,7 +121,7 @@ function startJourney() {
       
             {
               text: 'Loot whatever is inside and head to the nearest Kingdom. ',
-              nextPath: 4
+              nextPath: 3
             }
           ]
       
@@ -129,7 +129,30 @@ function startJourney() {
 
         {
           path: 3,
-          text: ''
+          text: 'Finishing your spear and finding nothing to loot you approach a sign of a land untouched by you before. You read to yourself: Tavalon Empire. Where outsiders are not all that welcome. QUICK! You hear rustling around the corner wall infront of you, you: ',
+          choices: [
+            {
+              text: 'Hide behind a tree in hopes no one takes your horse away.',
+              requiredState: (currentState) => currentState.buildSpear,
+              setState: {buildSpear: false, hide: true},
+              nextPath: 5
+            
+            },
+
+            {
+              text: 'Await and announce yourself to whoever it may be. They might be able to be an ally.',
+              requiredState: (currentState) => currentState.buildSpear,
+              setState: { buildSpear: false, ally: true},
+              nextPath: 5
+            },
+
+            {
+              text: 'Rush out ready for battle to defend yourself.',
+              requiredState: (currentState) => currentState.buildSpear,
+              setState: { buildSpear: false, fight: true},
+              nextPath: 5
+            },
+          ]
         }
       ]
       
