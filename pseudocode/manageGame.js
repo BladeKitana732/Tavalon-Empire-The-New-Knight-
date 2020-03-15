@@ -94,36 +94,42 @@ function startJourney() {
       
             {
               text: 'Sneak into next kingdom and use money left to buy one.',
-              nextPath: 2
+              setState: {kingdom: true},
+              nextPath: 3
             },
           ]
         },
       
         {
           path: 2,
-          text: '',
+          text: 'On your ride on your stead you head to the forest to get materials to build a spear and collect food and water while at it. You come to a stump with a door too small for man but bigger than needed for an animal. You:',
           choices: [
             {
-              text: 'path2button1',
-              requiredState: (currentState) => currentState.choice1,
-              setState: {path2text: true, choice1: false},
+              text: 'Knock and see if anything is inside.',
+              requiredState: (currentState) => currentState.forest,
+              setState: { knock: true, forest: false},
               nextPath: 3
       
             },
       
             {
-              text: 'path2button2',
-              requiredState: (currentState) => currentState.choice1,
-              setState: {path2text: true, choice1: false},
+              text: 'Gather material to build spear then head to nearest Kingdom.',
+              requiredState: (currentState) => currentState.forest,
+              setState: { buildSpear: true, forest: false},
               nextPath: 3
             },
       
             {
-              text: 'path2button3',
-              nextPath: 3
+              text: 'Loot whatever is inside and head to the nearest Kingdom. ',
+              nextPath: 4
             }
           ]
       
+        },
+
+        {
+          path: 3,
+          text: ''
         }
       ]
       
