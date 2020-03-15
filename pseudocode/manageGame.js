@@ -84,16 +84,16 @@ function startJourney() {
     const pathArray = [
         {
           path: 1,
-          text: 'path1',
+          text: 'You and your noble stead awake in a forest where you rested from guards the night prior. Going through the hut you find you lost your weapon! Oh no. You decide to:',
           choices: [
             {
-              text: 'button1',
-              setState: { choice1: true},
+              text: 'Go through forest to build one.',
+              setState: { forest: true},
               nextPath: 2,
             },
       
             {
-              text: 'button2',
+              text: 'Sneak into next kingdom and use money left to buy one.',
               nextPath: 2
             },
           ]
@@ -101,7 +101,7 @@ function startJourney() {
       
         {
           path: 2,
-          text: 'path2',
+          text: '',
           choices: [
             {
               text: 'path2button1',

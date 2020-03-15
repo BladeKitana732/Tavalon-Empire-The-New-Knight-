@@ -96,20 +96,18 @@ h3 {
 /* gameplay page */
 
 #storyPage {
+    border: solid 3px red;
     padding: 0;
     margin: 0;
-    display: grid;
-    grid-template-columns:2fr 1fr 2fr;
-    grid-gap: 150px;
-    background-image: url(https://cdnb.artstation.com/p/assets/images/images/008/244/227/large/rui-padinha-porttown-v002.jpg?1511440745);
+   display: grid;
+    background-image: url(https://cdnb.artstation.com/p/assets/images/images/008/244/227/large/rui-padinha-porttown-v002.jpg?1511440745) ;
 }
 
 .container {
-    border: solid 2px orange;
+    /* border: solid 2px orange; */
     width: 600px;
     max-width: 50%;
     background-color: white;
-    padding: 10px;
     border-radius: 5px;
     box-shadow: 0 0 10px 2px;
     height: 30%;
@@ -122,15 +120,15 @@ h3 {
     grid-template-columns: repeat(2, auto);
     gap: 20px;
     margin-top: 60px;
-    border: solid 2px blue;
+    /* border: solid 2px blue; */
     
 }
 
 .btn {
     background-color: bisque;
-    border: solid 2px brown;
+    border: solid 2px bisque;
     border-radius: 10px;
-    padding: 5px 15px;
+    padding: 15px 15px;
     color: black;
     outline: none;
 }
@@ -148,11 +146,4 @@ h3 {
     border: 2px solid gold;
 }
 
-#storyWrapper {
-    border: solid 4px red;
-    display: grid;
-    grid-template-columns: 3fr 1fr 3fr;
-    grid-gap: 267px;
-   
-   
-}
+
