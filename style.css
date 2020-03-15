@@ -102,9 +102,9 @@ h3 {
    display: grid;
     background-image: url(https://cdnb.artstation.com/p/assets/images/images/008/244/227/large/rui-padinha-porttown-v002.jpg?1511440745) ;
 }
-
+/* 
 .container {
-    /* border: solid 2px orange; */
+    border: solid 2px orange;
     width: 600px;
     max-width: 50%;
     background-color: white;
@@ -113,7 +113,7 @@ h3 {
     height: 30%;
     
     
-}
+} */
 
 .btn-grid {
     display: grid;
