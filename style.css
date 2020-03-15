@@ -98,15 +98,13 @@ h3 {
 #storyPage {
     padding: 0;
     margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100vw;
-    height: 100vh;
+    display: grid;
+    grid-template-columns:2fr 1fr 2fr;
     background-image: url(https://cdnb.artstation.com/p/assets/images/images/008/244/227/large/rui-padinha-porttown-v002.jpg?1511440745);
 }
 
 .container {
+    border: solid 2px black;
     width: 600px;
     max-width: 50%;
     background-color: white;
@@ -122,6 +120,8 @@ h3 {
     grid-template-columns: repeat(2, auto);
     gap: 20px;
     margin-top: 60px;
+    border: solid 2px blue;
+    
 }
 
 .btn {
