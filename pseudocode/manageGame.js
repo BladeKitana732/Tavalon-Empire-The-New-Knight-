@@ -81,79 +81,174 @@ function startJourney() {
     }
 
 
-    const pathArray = [
+    const pathArray = [ {
+      path: 1,
+      text: 'You wake up in a forest with your noble stead from hiding from guards the night prior. Searching the hut you lost your weapon. Only enough coin left for food and one small weapon. You: ',
+      choices: [
         {
-          path: 1,
-          text: 'You and your noble stead awake in a forest where you rested from guards the night prior. Going through the hut you find you lost your weapon! Oh no. You decide to:',
-          choices: [
-            {
-              text: 'Go through forest to build one.',
-              setState: { forest: true},
-              nextPath: 2,
-            },
-      
-            {
-              text: 'Sneak into next kingdom and use money left to buy one.',
-              setState: {kingdom: true},
-              nextPath: 3
-            },
-          ]
+          text: 'Take the forest to build a weapon yourself and gather food and water.',
+          setState: { forest: true },
+          nextPath: 2
         },
-      
         {
-          path: 2,
-          text: 'On your ride on your stead you head to the forest to get materials to build a spear and collect food and water while at it. You come to a stump with a door too small for man but bigger than needed for an animal. You:',
-          choices: [
-            {
-              text: 'Knock and see if anything is inside. ',
-              requiredState: (currentState) => currentState.forest,
-              setState: { knock: true, forest: false},
-              nextPath: 4
-      
-            },
-      
-            {
-              text: 'Gather material to build spear then head to nearest Kingdom.',
-              requiredState: (currentState) => currentState.forest,
-              setState: { buildSpear: true, forest: false},
-              nextPath: 3
-            },
-      
-            {
-              text: 'Loot whatever is inside and head to the nearest Kingdom. ',
-              nextPath: 3
-            }
-          ]
-      
-        },
-
-        {
-          path: 3,
-          text: 'Finishing your spear and finding nothing to loot you approach a sign of a land untouched by you before. You read to yourself: Tavalon Empire. Where outsiders are not all that welcome. QUICK! You hear rustling around the corner wall infront of you, you: ',
-          choices: [
-            {
-              text: 'Hide behind a tree in hopes no one takes your horse away.',
-              requiredState: (currentState) => currentState.buildSpear,
-              setState: {buildSpear: false, hide: true},
-              nextPath: 5
-            
-            },
-
-            {
-              text: 'Await and announce yourself to whoever it may be. They might be able to be an ally.',
-              requiredState: (currentState) => currentState.buildSpear,
-              setState: { buildSpear: false, ally: true},
-              nextPath: 5
-            },
-
-            {
-              text: 'Rush out ready for battle to defend yourself.',
-              requiredState: (currentState) => currentState.buildSpear,
-              setState: { buildSpear: false, fight: true},
-              nextPath: 5
-            },
-          ]
+          text: 'Find nearest kingdom and buy what you can. You have traveled many lands, you are bound to meet someone you know along the way.',
+          nextPath: 3
         }
       ]
+    },
+
+
+    {
+      path: 2,
+      text: 'Along the horse-ride you find a tree stump with a peculiar door. Too small for any human to fit through but bigger than needed for any creature that resides here. You: ',
+      choices: [
+        {
+          text: 'Ignore it, build a weapon and head to kingdom',
+          requiredState: (currentState) => currentState.forest,
+          setState: { forest: false, stumpIgnored: true },
+          nextPath: 3
+        },
+        {
+          text: 'Try and loot through it and head towards nearest kingdom',
+          requiredState: (currentState) => currentState.blueGoo,
+          setState: { blueGoo: false, shield: true },
+          nextPath: 3
+        },
+        {
+          text: 'Ignore the merchant',
+          nextPath: 3
+        }
+      ]
+    },
+
+
+    {
+      path: 3,
+      text: 'After leaving the merchant you start to feel tired and stumble upon a small town next to a dangerous looking castle.',
+      choices: [
+        {
+          text: 'Explore the castle',
+          nextPath: 4
+        },
+        {
+          text: 'Find a room to sleep at in the town',
+          nextPath: 5
+        },
+        {
+          text: 'Find some hay in a stable to sleep in',
+          nextPath: 6
+        }
+      ]
+    },
+
+
+    {
+      path: 4,
+      text: 'You are so tired that you fall asleep while exploring the castle and are killed by some terrible monster in your sleep.',
+      choices: [
+        {
+          text: 'Restart Journey',
+          nextPath: -1
+        }
+      ]
+    },
+
+
+    {
+      path: 5,
+      text: 'Without any money to buy a room you break into the nearest inn and fall asleep. After a few hours of sleep the owner of the inn finds you and has the town guard lock you in a cell.',
+      choices: [
+        {
+          text: 'Restart Journey',
+          nextPath: -1
+        }
+      ]
+    },
+
+
+    {
+      path: 6,
+      text: 'You wake up well rested and full of energy ready to explore the nearby castle.',
+      choices: [
+        {
+          text: 'Explore the castle',
+          nextPath: 7
+        }
+      ]
+    },
+
+    
+    {
+      path: 7,
+      text: 'While exploring the castle you come across a horrible monster in your path.',
+      choices: [
+        {
+          text: 'Try to run',
+          nextPath: 8
+        },
+        {
+          text: 'Attack it with your sword',
+          requiredState: (currentState) => currentState.sword,
+          nextPath: 9
+        },
+        {
+          text: 'Hide behind your shield',
+          requiredState: (currentState) => currentState.shield,
+          nextPath: 10
+        },
+        {
+          text: 'Throw the blue goo at it',
+          requiredState: (currentState) => currentState.blueGoo,
+          nextPath: 11
+        }
+      ]
+    },
+
+    {
+      path: 8,
+      text: 'Your attempts to run are in vain and the monster easily catches.',
+      choices: [
+        {
+          text: 'Restart Journey',
+          nextPath: -1
+        }
+      ]
+    },
+
+    {
+      path: 9,
+      text: 'You foolishly thought this monster could be slain with a single sword.',
+      choices: [
+        {
+          text: 'Restart Journey',
+          nextPath: -1
+        }
+      ]
+    },
+
+    {
+      path: 10,
+      text: 'The monster laughed as you hid behind your shield and ate you.',
+      choices: [
+        {
+          text: 'Restart Journey',
+          nextPath: -1
+        }
+      ]
+    },
+
+    {
+      path: 11,
+      text: 'You threw your jar of goo at the monster and it exploded. After the dust settled you saw the monster was destroyed. Seeing your victory you decide to claim this castle as your and live out the rest of your days there.',
+      options: [
+        {
+          text: 'Congratulations. Play Again.',
+          nextPath: -1
+        }
+      ]
+    }
+  ]
+
+    
       
       startJourney()

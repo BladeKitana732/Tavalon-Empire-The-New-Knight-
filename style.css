@@ -128,13 +128,13 @@ h3 {
     background-color: bisque;
     border: solid 2px bisque;
     border-radius: 10px;
-    padding: 15px 15px;
     color: black;
     outline: none;
+    font-family: fantasy;
 }
 
 .btn:hover {
-    border-color: darkcyan;
+    border-color: teal;
 }
 
 #player1 {
