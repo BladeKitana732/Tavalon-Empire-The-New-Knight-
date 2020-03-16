@@ -22,6 +22,15 @@ const attack = () => {
     let userAttack = Math.floor(Math.random() * user.power);
     enemy.health -= userAttack;
 
+    
+    setTimeout(() => {
+        let enemyAttack = Math.floor(Math.random() * enemy.power);
+        user.health -= enemyAttack; 
+        showInDom();
+    }, 500);
+
+    
+
     showInDom();
 }
 
