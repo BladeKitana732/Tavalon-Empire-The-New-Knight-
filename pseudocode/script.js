@@ -6,15 +6,11 @@
 // code 1 test: Initialize class constructor for characters 
 
 class character {
-    constructor(health,attack,defense,special) {
+    constructor(health,attack,defense,) {
         this.health = health;
         this.attack = attack;
         this.defense = defense;
-        this.special = special;
-    }
 
-    get getHealth() {
-        return this.health;
     }
 
 
@@ -147,3 +143,9 @@ function startJourney() {
   ]
   
   startJourney()
+
+  //battle
+
+  setBattle: function () {
+
+  },

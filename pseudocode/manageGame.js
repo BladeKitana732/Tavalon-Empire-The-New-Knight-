@@ -11,7 +11,7 @@ let Game = {
     //using switch statement to run through character options and to easily break when selection has been made
     resetPlayer: function(characterType) {
         switch(characterType) {
-            case "Necromancer":
+            case "Necromancer" :
                 player = new Character(characterType,100,30,60);
                 break;
             case "Healer":
@@ -28,10 +28,6 @@ let Game = {
 
         let getCharacter = document.querySelector(".wrapper");
         getCharacter.innerHTML = '<img src="wireframes/characters/' + characterType.toLowerCase() + '.jpg" class="wireframes/characters"><div><h3>' + characterType + '</h3><p>Health: ' + player.health + '</p><p>Attack: ' + player.attack + '</p><p>Defense: ' + player.defense + '</p></div>';
-    },
-
-    setBattle: function () {
-
     },
 
 }
@@ -92,7 +88,7 @@ function startJourney() {
         },
         {
           text: 'Find nearest kingdom and buy what you can. You have traveled many lands, you are bound to meet someone you know along the way.',
-          nextPath: 3
+          nextPath: 4
         }
       ]
     },
@@ -106,7 +102,7 @@ function startJourney() {
           text: 'Ignore it, build a weapon and head to kingdom',
           requiredState: (currentState) => currentState.forest,
           setState: { forest: false, stumpIgnored: true },
-          nextPath: 3
+          nextPath: 4
         },
         {
           text: 'Try and loot through it and build weapon',
@@ -120,19 +116,11 @@ function startJourney() {
 
     {
       path: 3,
-      text: 'After leaving the forest you approach a sign of a new land unexplored by you before. Tavalon Empire, it rings a bell of the generous Queen who is loved by all ruled by her. QUICK! You hear rustling around the trees, you:  ',
+      text: 'You are taken aback by a creature that was awaiting you to try and enter. With no weapon to defend yourself, you die. Uh oh. ',
       choices: [
         {
-          text: 'Announce yourself and you have a weapon.',
-          nextPath: 4
-        },
-        {
-          text: 'Hide in hopes they do not steal your stead and lay low until you see what is going on.',
-          nextPath: 5
-        },
-        {
-          text: 'Ask aloud who is there and be battle ready.',
-          nextPath: 6
+          text: 'Restart Journey',
+          nextPath: -1
         }
       ]
     },
@@ -140,23 +128,45 @@ function startJourney() {
 
     {
       path: 4,
-      text: 'You are so tired that you fall asleep while exploring the castle and are killed by some terrible monster in your sleep.',
+      text: 'You approach a land known as Tavalon Empire. Queen is adored by those ruled by her and are unweary about new faces. QUICK! You hear a rustling just behind the wall, you: ',
       choices: [
         {
-          text: 'Restart Journey',
-          nextPath: -1
+          text: 'Announce yourself',
+          setState: { stumpIgnored: false, announceSelf: true },
+          nextPath: 5
+        },
+
+        {
+          text: 'Hide and hope they do not steal your horse away.',
+          setState: { stumpIgnored: false, hide: true },
+          nextPath: 6
         }
+    
       ]
     },
 
 
     {
       path: 5,
-      text: 'Without any money to buy a room you break into the nearest inn and fall asleep. After a few hours of sleep the owner of the inn finds you and has the town guard lock you in a cell.',
+      text: 'You are greeted by a possible enemy who resides in Tavalon Empire, they challenge you to a battle to get through and meet the Queen. Your first move is to:  ',
       choices: [
         {
-          text: 'Restart Journey',
-          nextPath: -1
+          text: 'Attack',
+          requiredState: (currentState) => currentState.announceSelf,
+          setState: {annouceSelf: false, preBattle: true },
+          nextPath: 7
+        },
+
+        {
+          text: 'Defend',
+          requiredState: (currentState) => currentState.announceSelf,
+          setState: {annouceSelf: false, preBattle: true },
+          nextPath: 8
+        },
+
+        {
+          text: 'Run away',
+          nextPath: 10
         }
       ]
     },
@@ -164,11 +174,20 @@ function startJourney() {
 
     {
       path: 6,
-      text: 'You wake up well rested and full of energy ready to explore the nearby castle.',
+      text: 'Behind the tree you see a potential enemy of the Tavalon Empire. They spot your horse and not shortly after spots you. Alarmed they prepare for battle. You: ',
       choices: [
         {
-          text: 'Explore the castle',
+          text: 'Attack',
+          requiredState: (currentState) => currentState.hide,
+          setState: {hide: false, preBattle: true },
           nextPath: 7
+        },
+
+        {
+          text: 'Surrender',
+          requiredState: (currentState) => currentState.hide,
+          setState: {hide: false, preBattle: true },
+          nextPath: 10
         }
       ]
     },
@@ -176,33 +195,26 @@ function startJourney() {
     
     {
       path: 7,
-      text: 'While exploring the castle you come across a horrible monster in your path.',
+      text: 'Battle your way to knighthood.',
       choices: [
         {
-          text: 'Try to run',
-          nextPath: 8
+          text: 'Attack',
+          requiredState: (currentState) => currentState.preBattle,
+          nextPath: 11
         },
+
         {
-          text: 'Attack it with your sword',
-          requiredState: (currentState) => currentState.sword,
-          nextPath: 9
-        },
-        {
-          text: 'Hide behind your shield',
-          requiredState: (currentState) => currentState.shield,
+          text: 'Defend',
           nextPath: 10
         },
-        {
-          text: 'Throw the blue goo at it',
-          requiredState: (currentState) => currentState.blueGoo,
-          nextPath: 11
-        }
+       
+        
       ]
     },
 
     {
       path: 8,
-      text: 'Your attempts to run are in vain and the monster easily catches.',
+      text: 'Your attempts to defend can only go so far with this forest made weapon. It breaks 5th hit from enemy. You lose :(.',
       choices: [
         {
           text: 'Restart Journey',
@@ -211,20 +223,20 @@ function startJourney() {
       ]
     },
 
-    {
-      path: 9,
-      text: 'You foolishly thought this monster could be slain with a single sword.',
-      choices: [
-        {
-          text: 'Restart Journey',
-          nextPath: -1
-        }
-      ]
-    },
+    // {
+    //   path: 9,
+    //   text: 'You foolishly thought this monster could be slain with a single sword.',
+    //   choices: [
+    //     {
+    //       text: 'Restart Journey',
+    //       nextPath: -1
+    //     }
+    //   ]
+    // },
 
     {
       path: 10,
-      text: 'The monster laughed as you hid behind your shield and ate you.',
+      text: 'No heart to fight on, as you run you are hit with an arrow. You lose :(.',
       choices: [
         {
           text: 'Restart Journey',
@@ -235,7 +247,7 @@ function startJourney() {
 
     {
       path: 11,
-      text: 'You threw your jar of goo at the monster and it exploded. After the dust settled you saw the monster was destroyed. Seeing your victory you decide to claim this castle as your and live out the rest of your days there.',
+      text: 'You got the enemy on their knees! You have proved your worth to be considered residency in Tavalon Empire! Your new ally takes you to see the Queen. You have been knighted! ',
       options: [
         {
           text: 'Congratulations. Play Again.',
