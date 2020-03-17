@@ -43,7 +43,7 @@ game using html, css and javascript
 4. Must battle; each character has a special weapon that carries different endings if choice is made to find special weapon along journey (easter egg/NOT NEEDED not win game). (if extra time permits).
 5. Game runs until in castle and knighted by Queen; solo mode will have user meet all other characters outside of character list to battle. 
 6. IF 2 player mode is selected with user, have screen "split" where both sides make a choice within timer.
-8. Game over when die in battle, or did not get knighted. 
+8. Game over when die in action, or did not get knighted. 
 9. Player selection: Player 1 can choose between Necromancer and Healer, and player 2 can choose between warrior or archer.
 
 
