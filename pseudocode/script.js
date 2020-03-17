@@ -27,9 +27,9 @@
 
 //instance for code 2 test
 
-let Necromancer = new Characters('Necromancer',100,20,50);
+// let Necromancer = new Characters('Necromancer',100,20,50);
 
-console.log(Necromancer)
+// console.log(Necromancer)
 
  
  
@@ -149,3 +149,6 @@ console.log(Necromancer)
 //   setBattle: function () {
 
 //   },
+
+
+   
