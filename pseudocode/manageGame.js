@@ -39,9 +39,10 @@ let Game = {
         }
   //variable to link with html div nested class
 
-        let getCharacter = document.querySelector(".wrapper");
+        let getCharacter = document.querySelector(".playerChoice");
         getCharacter.innerHTML = '<img src="wireframes/characters/' + characterType.toLowerCase() + '.jpg" class="wireframes/characters"><div><h3>' + characterType + '</h3><p>Health: ' + player.health + '</p><p>Attack: ' + player.attack + '</p><p>Defense: ' + player.defense + '</p></div>';
     },
+    
 
     
 

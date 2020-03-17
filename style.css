@@ -137,12 +137,9 @@ h3 {
     border-color: teal;
 }
 
-#player1 {
-    border: 2px solid gold;
-    
-}
 
-#player2 {
+
+.playerChoice {
     border: 2px solid gold;
 }
 
