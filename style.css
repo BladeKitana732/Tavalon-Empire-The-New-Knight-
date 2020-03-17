@@ -139,10 +139,17 @@ h3 {
 
 
 
-.playerChoice {
+/* .playerChoice {
+    border: 2px solid gold;
+} */
+
+#playerChoice1 {
     border: 2px solid gold;
 }
 
+#playerChoice2 {
+    border: 2px solid gold;
+}
 
 .grid-item {
     /* border: solid 4px blue; */

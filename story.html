@@ -17,13 +17,14 @@
         
         <div class="grid-item">
             
-            <div class="playerChoice">
+            <div id="playerChoice1">
              <h1>Player 1 Selection</h1>
              <button onclick="Game.gameStart('Necromancer')">
                 Necromancer Stat</button>
+              <p id="necroStat"></p>  
              <button onclick="Game.gameStart('Healer')">
                     Healer Stat</button>
-               
+              <p id="healerStat"></p>
             </div>
 
         </div>
@@ -45,7 +46,7 @@
       
 
         <div class="grid-item">
-            <div class="playerChoice">
+            <div id="playerChoice2">
              <h1>Player 2 Selection</h1>
              <button onclick="Game.gameStart('Warrior')">
                 Warrior Stat</button>

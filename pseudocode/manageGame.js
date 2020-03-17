@@ -39,8 +39,11 @@ let Game = {
         }
   //variable to link with html div nested class
 
-        let getCharacter = document.querySelector(".playerChoice");
-        getCharacter.innerHTML = '<img src="wireframes/characters/' + characterType.toLowerCase() + '.jpg" class="wireframes/characters"><div><h3>' + characterType + '</h3><p>Health: ' + player.health + '</p><p>Attack: ' + player.attack + '</p><p>Defense: ' + player.defense + '</p></div>';
+        let Necromancer = document.querySelector("#necroStat");
+        Necromancer.innerHTML = '<img src="wireframes/characters/' + characterType.toLowerCase() + '.jpg" class="wireframes/characters"><div><h3>' + characterType + '</h3><p>Health: ' + player.health + '</p><p>Attack: ' + player.attack + '</p><p>Defense: ' + player.defense + '</p></div>';
+
+
+
     },
     
 
@@ -62,25 +65,29 @@ function startJourney() {
     
   }
 
+//this function is to ensure i am only displaying the choices that are needed to choose from 
   function showSelection(choice) {
     return choice.requiredState == null || choice.requiredState(state)
   }
 
-  
+//this function is to ensure that AFTER player makes selection, it will continue on with journey with current choices based on current path number it is on.
   function choiceSelection(choice) {  
     const nextPathNum = choice.nextPath
     state = Object.assign(state, choice.setState)
     pathArrayDisplay(nextPathNum)
   }
 
-
+//this function is to pull the text information from the array to be able to display selections/choices based on current path in DOM
   function pathArrayDisplay(arrayIndex) {
     const selection = pathArray.find(selection => selection.path === arrayIndex)
     textElement.innerText = selection.text
+
+   //while loop to remove all button choices to display button choices that are needed only
     while(choiceButtonsElement.firstChild) {
         choiceButtonsElement.removeChild(choiceButtonsElement.firstChild)
       }
 
+    //pulling selection variable which holds the data of text needed to be displayed for choice selections with event listener to newly created button element to call choices properly through each selection 
       selection.choices.forEach(choice => {
         if(showSelection(choice)){
           const button = document.createElement('button')
@@ -221,7 +228,7 @@ function startJourney() {
 
         {
           text: 'Defend',
-          nextPath: 10
+          nextPath: 8
         },
        
         
